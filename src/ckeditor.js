@@ -8,12 +8,16 @@ import ClassicEditorBase from '@ckeditor/ckeditor5-editor-classic/src/classicedi
 
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
 import UploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter';
-import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
+// import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
-import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
-import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder';
-import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
+import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
+import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript';
+import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
+// import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
+import Font from '@ckeditor/ckeditor5-font/src/font';
+// import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder';
+// import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import Image from '@ckeditor/ckeditor5-image/src/image';
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
@@ -24,7 +28,7 @@ import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
-import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
+// import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
@@ -34,12 +38,16 @@ export default class ClassicEditor extends ClassicEditorBase {}
 ClassicEditor.builtinPlugins = [
 	Essentials,
 	UploadAdapter,
-	Autoformat,
+	// Autoformat,
 	Bold,
 	Italic,
-	BlockQuote,
-	CKFinder,
-	EasyImage,
+	Underline,
+	Subscript,
+	Superscript,
+	// BlockQuote,
+	Font,
+	// CKFinder,
+	// EasyImage,
 	Heading,
 	Image,
 	ImageCaption,
@@ -50,7 +58,7 @@ ClassicEditor.builtinPlugins = [
 	List,
 	MediaEmbed,
 	Paragraph,
-	PasteFromOffice,
+	// PasteFromOffice,
 	Table,
 	TableToolbar
 ];
@@ -59,27 +67,39 @@ ClassicEditor.builtinPlugins = [
 ClassicEditor.defaultConfig = {
 	toolbar: {
 		items: [
-			'heading',
+			'heading', 
 			'|',
-			'bold',
-			'italic',
-			'link',
-			'bulletedList',
-			'numberedList',
-			'imageUpload',
-			'blockQuote',
-			'insertTable',
-			'mediaEmbed',
-			'undo',
-			'redo'
+			'fontSize', 'bulletedList', 'numberedList',
+			'|',
+			'bold', 'italic', 'underline', 
+			'|',
+			'subscript', 'superscript',
+			'|',
+			'link', 'imageUpload', 'mediaEmbed', 'insertTable',
+			'|',
+			'undo', 'redo'
+		]
+	},
+	fontSize: {
+		options: [
+			10,
+			12,
+			14,
+			'default',
+			18,
+			20,
+			24,
+			30
 		]
 	},
 	image: {
 		toolbar: [
-			'imageStyle:full',
-			'imageStyle:side',
-			'|',
+			'imageStyle:alignLeft', 'imageStyle:full', 'imageStyle:alignRight', 
+			'|', 
 			'imageTextAlternative'
+		],
+		styles: [
+			'full', 'alignLeft', 'alignRight'
 		]
 	},
 	table: {
