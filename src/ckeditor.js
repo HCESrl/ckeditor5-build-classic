@@ -1,3 +1,8 @@
+/**
+ * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+ * For licensing, see LICENSE.md.
+ */
+
 // The editor creator to use.
 import ClassicEditorBase from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
 
@@ -89,8 +94,8 @@ ClassicEditor.defaultConfig = {
 	},
 	image: {
 		toolbar: [
-			'imageStyle:alignLeft', 'imageStyle:full', 'imageStyle:alignRight', 
-			'|', 
+			'imageStyle:alignLeft', 'imageStyle:full', 'imageStyle:alignRight',
+			'|',
 			'imageTextAlternative'
 		],
 		styles: [
