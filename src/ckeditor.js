@@ -76,7 +76,7 @@ ClassicEditor.defaultConfig = {
 			'|',
 			'bulletedList', 'numberedList',
 			'|',
-			'bold', 'italic', 'underline', 'smallCaps',
+			'bold', 'italic', 'underline',
 			'|',
 			'link', 'imageUpload', 'mediaEmbed', 'insertTable',
 			'|',
