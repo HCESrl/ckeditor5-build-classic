@@ -33,6 +33,8 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
+import SmallCaps from 'ckeditor5-small-caps/src/small-caps';
+
 export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
@@ -45,6 +47,7 @@ ClassicEditor.builtinPlugins = [
 	Underline,
 	Subscript,
 	Superscript,
+	SmallCaps,
 	BlockQuote,
 	Font,
 	Alignment,
@@ -73,7 +76,7 @@ ClassicEditor.defaultConfig = {
 			'|',
 			'bulletedList', 'numberedList',
 			'|',
-			'bold', 'italic', 'underline',
+			'bold', 'italic', 'underline', 'smallCaps',
 			'|',
 			'link', 'imageUpload', 'mediaEmbed', 'insertTable',
 			'|',
