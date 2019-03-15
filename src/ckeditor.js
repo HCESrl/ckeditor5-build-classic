@@ -33,6 +33,8 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
+import LineHeight from 'ckeditor5-line-height';
+
 import SmallCaps from 'ckeditor5-small-caps/src/small-caps';
 
 export default class ClassicEditor extends ClassicEditorBase {}
@@ -51,6 +53,7 @@ ClassicEditor.builtinPlugins = [
 	BlockQuote,
 	Font,
 	Alignment,
+	LineHeight,
 	// CKFinder,
 	// EasyImage,
 	Heading,
@@ -72,7 +75,7 @@ ClassicEditor.builtinPlugins = [
 ClassicEditor.defaultConfig = {
 	toolbar: {
 		items: [
-			'heading', 'fontSize', 'alignment',
+			'heading', 'fontSize', 'lineHeight', 'alignment',
 			'|',
 			'bulletedList', 'numberedList',
 			'|',
