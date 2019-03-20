@@ -21,9 +21,9 @@ import Font from '@ckeditor/ckeditor5-font/src/font';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Image from '@ckeditor/ckeditor5-image/src/image';
+import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
-import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
@@ -58,9 +58,9 @@ ClassicEditor.builtinPlugins = [
 	// EasyImage,
 	Heading,
 	Image,
+	ImageToolbar,
 	ImageCaption,
 	ImageStyle,
-	ImageToolbar,
 	ImageUpload,
 	Link,
 	List,
