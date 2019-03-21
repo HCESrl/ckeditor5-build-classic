@@ -33,7 +33,7 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
-import LineHeight from 'ckeditor5-line-height';
+import LineHeight from './plugins/lineheight/src/line-height';
 
 import SmallCaps from 'ckeditor5-small-caps/src/small-caps';
 
